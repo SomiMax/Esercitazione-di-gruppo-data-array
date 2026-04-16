@@ -1,0 +1,1 @@
+# Esercitazione-di-gruppo-data-array
