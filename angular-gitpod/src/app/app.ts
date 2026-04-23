@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ProductListComponent } from './components/product-list/product-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [ProductListComponent],
+  // Usiamo il template inline così non abbiamo problemi di file non trovati
+  template: `<app-product-list></app-product-list>`
 })
-export class App {
-  protected readonly title = signal('angular-gitpod');
-}
+export class App { } // Qui deve esserci scritto App, non AppComponent
